@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/MatrixPackage.dir/main.cpp.o CMakeFiles/MatrixPackage.dir/Matrix.cpp.o  -o MatrixPackage 

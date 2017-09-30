@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wenshao/ClionProjects/RandomPackage/Complex.cpp
+Complex.h
+/home/wenshao/ClionProjects/RandomPackage/Complex.h
+cmath
+-
+
+/home/wenshao/ClionProjects/RandomPackage/Complex.h
+iostream
+-
+
+/home/wenshao/ClionProjects/RandomPackage/Matrix.cpp
+Matrix.h
+/home/wenshao/ClionProjects/RandomPackage/Matrix.h
+cstring
+-
+cmath
+-
+
+/home/wenshao/ClionProjects/RandomPackage/Matrix.h
+iostream
+-
+
+/home/wenshao/ClionProjects/RandomPackage/Random.cpp
+Random.h
+/home/wenshao/ClionProjects/RandomPackage/Random.h
+
+/home/wenshao/ClionProjects/RandomPackage/Random.h
+Matrix.cpp
+/home/wenshao/ClionProjects/RandomPackage/Matrix.cpp
+Complex.cpp
+/home/wenshao/ClionProjects/RandomPackage/Complex.cpp
+
+/home/wenshao/ClionProjects/RandomPackage/main.cpp
+iostream
+-
+Random.cpp
+/home/wenshao/ClionProjects/RandomPackage/Random.cpp
+

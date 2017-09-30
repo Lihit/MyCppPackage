@@ -1,0 +1,3 @@
+/home/wenshao/ClionProjects/RandomPackage/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/wenshao/ClionProjects/RandomPackage/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/wenshao/ClionProjects/RandomPackage/cmake-build-debug/CMakeFiles/RandomPackage.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/RandomPackage.dir/main.cpp.o CMakeFiles/RandomPackage.dir/Random.cpp.o CMakeFiles/RandomPackage.dir/Matrix.cpp.o CMakeFiles/RandomPackage.dir/Complex.cpp.o  -o RandomPackage 
