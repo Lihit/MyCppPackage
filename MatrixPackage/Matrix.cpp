@@ -239,22 +239,26 @@ Matrix<T> Matrix<T>::operator-(double SubNum) {
 }
 
 template<typename T>
-bool Matrix<T>::operator==(Matrix<T> &mat) {
+Matrix<T> Matrix<T>::operator==(Matrix<T> &mat) {
     if (this->MatrixCol == mat.row() && this->MatrixRow == mat.col()) {
+        Matrix<T> ret(mat.row(), mat.col(), 0);
         for (int i = 0; i < this->MatrixRow; i++) {
             for (int j = 0; j < this->MatrixCol; j++) {
-                if ((*this)(i, j) != mat(i, j)) return false;
+                if ((*this)(i, j) == mat(i, j)) {
+                    ret(i, j) = 0;
+                }
             }
         }
-        return true;
+        return ret;
     } else {
-        return false;
+        Matrix<T> tmp;
+        return tmp;
     }
 }
 
 template<typename T>
-bool Matrix<T>::operator!=(Matrix<T> &mat) {
-    return !(*this == mat);
+Matrix<T> Matrix<T>::operator!=(Matrix<T> &mat) {
+    return ~(*this == mat);
 }
 
 template<typename T>
@@ -262,7 +266,7 @@ Matrix<T> Matrix<T>::operator^(double power) {
     Matrix<T> ret(this->MatrixRow, this->MatrixCol, 1);
     for (int i = 0; i < this->MatrixRow; ++i) {
         for (int j = 0; j < this->MatrixCol; ++j) {
-            ret(i,j)=pow((*this)(i,j),power);
+            ret(i, j) = pow((*this)(i, j), power);
         }
     }
     return ret;
@@ -791,15 +795,194 @@ Matrix<T> Matrix<T>::sliceByIndex(Matrix<T> &MatrixIndex, int axis) const {
     } else {
         Matrix<T> RowIndex;
         RowIndex.range(0, this->MatrixRow, this->MatrixRow);
-        return sliceByIndex(RowIndex,MatrixIndex);
+        return sliceByIndex(RowIndex, MatrixIndex);
     }
 }
 
+template<typename T>
+Matrix<T> Matrix<T>::operator>(Matrix<T> &mat) {
+    if (this->MatrixRow != mat.row() || this->MatrixCol != mat.col()) {
+        Matrix<T> tmp;
+        return tmp;
+    }
+    Matrix<T> ret(mat.row(), mat.col(), 0);
+    for (int i = 0; i < mat.row(); ++i) {
+        for (int j = 0; j < mat.col(); ++j) {
+            if ((*this)(i, j) > mat(i, j)) {
+                ret(i, j) = 1;
+            }
+        }
+    }
+    return ret;
+}
+
+template<typename T>
+Matrix<T> Matrix<T>::operator|(Matrix<T> &mat) {
+    if (this->MatrixRow != mat.row() || this->MatrixCol != mat.col()) {
+        Matrix<T> tmp;
+        return tmp;
+    }
+    Matrix<T> ret(mat.row(), mat.col(), 1);
+    for (int i = 0; i < mat.row(); ++i) {
+        for (int j = 0; j < mat.col(); ++j) {
+            if ((*this)(i, j) == 0 && mat(i, j) == 0) {
+                ret(i, j) = 0;
+            }
+        }
+    }
+    return ret;
+}
+
+template<typename T>
+Matrix<T> Matrix<T>::operator<(Matrix<T> &mat) {
+    if (this->MatrixRow != mat.row() || this->MatrixCol != mat.col()) {
+        Matrix<T> tmp;
+        return tmp;
+    }
+    Matrix<T> ret(mat.row(), mat.col(), 0);
+    for (int i = 0; i < mat.row(); ++i) {
+        for (int j = 0; j < mat.col(); ++j) {
+            if ((*this)(i, j) < mat(i, j)) {
+                ret(i, j) = 1;
+            }
+        }
+    }
+    return ret;
+}
+
+template<typename T>
+Matrix<T> Matrix<T>::operator&(Matrix<T> &mat) {
+    if (this->MatrixRow != mat.row() || this->MatrixCol != mat.col()) {
+        Matrix<T> tmp;
+        return tmp;
+    }
+    Matrix<T> ret(mat.row(), mat.col(), 0);
+    for (int i = 0; i < mat.row(); ++i) {
+        for (int j = 0; j < mat.col(); ++j) {
+            if ((*this)(i, j) != 0 && mat(i, j) != 0) {
+                ret(i, j) = 1;
+            }
+        }
+    }
+    return ret;
+}
 
 
+template<typename T>
+Matrix<T> &Matrix<T>::operator~() {
+    for (int i = 0; i < this->MatrixRow; ++i) {
+        for (int j = 0; j < this->MatrixCol; ++j) {
+            if ((*this)(i, j) == 0) {
+                (*this)(i, j) = 1;
+            } else {
+                (*this)(i, j) = 0;
+            }
+        }
+    }
+    return *this;
+}
 
+template<typename T>
+bool Matrix<T>::haveZero() {
+    for (int i = 0; i < this->MatrixRow; ++i) {
+        for (int j = 0; j < this->MatrixCol; ++j) {
+            if ((*this)(i, j) == 0) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
 
+template<typename T>
+Matrix<T> &Matrix<T>::setVal(Matrix<T> mat, T newVal) {
+    if (this->MatrixRow != mat.row() || this->MatrixCol != mat.col()) {
+        Matrix<T> tmp;
+        return tmp;
+    }
+    for (int i = 0; i < mat.row(); ++i) {
+        for (int j = 0; j < mat.col(); ++j) {
+            if (mat(i, j) != 0) {
+                (*this)(i, j) = newVal;
+            }
+        }
+    }
+    return *this;
+}
 
+template<typename T>
+Matrix<T> Matrix<T>::operator>(T val) {
+    Matrix<T> ret(this->MatrixRow, this->MatrixCol, 0);
+    for (int i = 0; i < this->MatrixRow; ++i) {
+        for (int j = 0; j < this->MatrixCol; ++j) {
+            if ((*this)(i, j) > val) {
+                ret(i, j) = 1;
+            }
+        }
+    }
+    return ret;
+}
 
+template<typename T>
+Matrix<T> Matrix<T>::operator<(T val) {
+    Matrix<T> ret(this->MatrixRow, this->MatrixCol, 0);
+    for (int i = 0; i < this->MatrixRow; ++i) {
+        for (int j = 0; j < this->MatrixCol; ++j) {
+            if ((*this)(i, j) < val) {
+                ret(i, j) = 1;
+            }
+        }
+    }
+    return ret;
+}
 
+template<typename T>
+Matrix<T> Matrix<T>::operator==(T val) {
+    Matrix<T> ret(this->MatrixRow, this->MatrixCol, 0);
+    for (int i = 0; i < this->MatrixRow; ++i) {
+        for (int j = 0; j < this->MatrixCol; ++j) {
+            if ((*this)(i, j) == val) {
+                ret(i, j) = 1;
+            }
+        }
+    }
+    return ret;
+}
 
+template<typename T>
+Matrix<T> Matrix<T>::operator!=(T val) {
+    Matrix<T> ret(this->MatrixRow, this->MatrixCol, 0);
+    for (int i = 0; i < this->MatrixRow; ++i) {
+        for (int j = 0; j < this->MatrixCol; ++j) {
+            if ((*this)(i, j) != val) {
+                ret(i, j) = 1;
+            }
+        }
+    }
+    return ret;
+}
+
+template<typename T>
+Matrix<T> &Matrix<T>::operator()(Matrix<T> &mat) {
+    for (int i = 0; i < this->MatrixRow; ++i) {
+        for (int j = 0; j < this->MatrixCol; ++j) {
+            if (mat(i, j) != 0) {
+                (*this)(i, j) = INT32_MAX;
+            }
+        }
+    }
+    return *this;
+
+}
+
+template<typename T>
+Matrix<T> &Matrix<T>::operator=(T newVal) {
+    for (int i = 0; i < this->MatrixRow; ++i) {
+        for (int j = 0; j < this->MatrixCol; ++j) {
+            if ((*this)(i, j) == INT32_MAX) {
+                (*this)(i, j) = newVal;
+            }
+        }
+    }
+    return *this;
+}

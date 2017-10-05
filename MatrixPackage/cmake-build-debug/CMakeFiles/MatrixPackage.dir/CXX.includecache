@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/wenshao/ClionProjects/MatrixPackage/Matrix.cpp
+/home/wenshao/MyProjects/MyCppPackage/MatrixPackage/Matrix.cpp
 Matrix.h
-/home/wenshao/ClionProjects/MatrixPackage/Matrix.h
+/home/wenshao/MyProjects/MyCppPackage/MatrixPackage/Matrix.h
 cstring
 -
 cmath
 -
 
-/home/wenshao/ClionProjects/MatrixPackage/Matrix.h
+/home/wenshao/MyProjects/MyCppPackage/MatrixPackage/Matrix.h
 iostream
 -
 
-/home/wenshao/ClionProjects/MatrixPackage/main.cpp
+/home/wenshao/MyProjects/MyCppPackage/MatrixPackage/main.cpp
 iostream
 -
 Matrix.cpp
-/home/wenshao/ClionProjects/MatrixPackage/Matrix.cpp
+/home/wenshao/MyProjects/MyCppPackage/MatrixPackage/Matrix.cpp
 

@@ -43,10 +43,10 @@ RM = /home/wenshao/JetBrain/Clion/clion-2016.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wenshao/ClionProjects/MatrixPackage
+CMAKE_SOURCE_DIR = /home/wenshao/MyProjects/MyCppPackage/MatrixPackage
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wenshao/ClionProjects/MatrixPackage/cmake-build-debug
+CMAKE_BINARY_DIR = /home/wenshao/MyProjects/MyCppPackage/MatrixPackage/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MatrixPackage.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/MatrixPackage.dir/flags.make
 
 CMakeFiles/MatrixPackage.dir/main.cpp.o: CMakeFiles/MatrixPackage.dir/flags.make
 CMakeFiles/MatrixPackage.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wenshao/ClionProjects/MatrixPackage/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MatrixPackage.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MatrixPackage.dir/main.cpp.o -c /home/wenshao/ClionProjects/MatrixPackage/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wenshao/MyProjects/MyCppPackage/MatrixPackage/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MatrixPackage.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MatrixPackage.dir/main.cpp.o -c /home/wenshao/MyProjects/MyCppPackage/MatrixPackage/main.cpp
 
 CMakeFiles/MatrixPackage.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MatrixPackage.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wenshao/ClionProjects/MatrixPackage/main.cpp > CMakeFiles/MatrixPackage.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wenshao/MyProjects/MyCppPackage/MatrixPackage/main.cpp > CMakeFiles/MatrixPackage.dir/main.cpp.i
 
 CMakeFiles/MatrixPackage.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MatrixPackage.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wenshao/ClionProjects/MatrixPackage/main.cpp -o CMakeFiles/MatrixPackage.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wenshao/MyProjects/MyCppPackage/MatrixPackage/main.cpp -o CMakeFiles/MatrixPackage.dir/main.cpp.s
 
 CMakeFiles/MatrixPackage.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/MatrixPackage.dir/main.cpp.o.provides.build: CMakeFiles/MatrixPackage
 
 CMakeFiles/MatrixPackage.dir/Matrix.cpp.o: CMakeFiles/MatrixPackage.dir/flags.make
 CMakeFiles/MatrixPackage.dir/Matrix.cpp.o: ../Matrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wenshao/ClionProjects/MatrixPackage/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MatrixPackage.dir/Matrix.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MatrixPackage.dir/Matrix.cpp.o -c /home/wenshao/ClionProjects/MatrixPackage/Matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wenshao/MyProjects/MyCppPackage/MatrixPackage/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MatrixPackage.dir/Matrix.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MatrixPackage.dir/Matrix.cpp.o -c /home/wenshao/MyProjects/MyCppPackage/MatrixPackage/Matrix.cpp
 
 CMakeFiles/MatrixPackage.dir/Matrix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MatrixPackage.dir/Matrix.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wenshao/ClionProjects/MatrixPackage/Matrix.cpp > CMakeFiles/MatrixPackage.dir/Matrix.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wenshao/MyProjects/MyCppPackage/MatrixPackage/Matrix.cpp > CMakeFiles/MatrixPackage.dir/Matrix.cpp.i
 
 CMakeFiles/MatrixPackage.dir/Matrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MatrixPackage.dir/Matrix.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wenshao/ClionProjects/MatrixPackage/Matrix.cpp -o CMakeFiles/MatrixPackage.dir/Matrix.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wenshao/MyProjects/MyCppPackage/MatrixPackage/Matrix.cpp -o CMakeFiles/MatrixPackage.dir/Matrix.cpp.s
 
 CMakeFiles/MatrixPackage.dir/Matrix.cpp.o.requires:
 
@@ -117,7 +117,7 @@ MatrixPackage: CMakeFiles/MatrixPackage.dir/main.cpp.o
 MatrixPackage: CMakeFiles/MatrixPackage.dir/Matrix.cpp.o
 MatrixPackage: CMakeFiles/MatrixPackage.dir/build.make
 MatrixPackage: CMakeFiles/MatrixPackage.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wenshao/ClionProjects/MatrixPackage/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MatrixPackage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wenshao/MyProjects/MyCppPackage/MatrixPackage/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MatrixPackage"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MatrixPackage.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -135,6 +135,6 @@ CMakeFiles/MatrixPackage.dir/clean:
 .PHONY : CMakeFiles/MatrixPackage.dir/clean
 
 CMakeFiles/MatrixPackage.dir/depend:
-	cd /home/wenshao/ClionProjects/MatrixPackage/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wenshao/ClionProjects/MatrixPackage /home/wenshao/ClionProjects/MatrixPackage /home/wenshao/ClionProjects/MatrixPackage/cmake-build-debug /home/wenshao/ClionProjects/MatrixPackage/cmake-build-debug /home/wenshao/ClionProjects/MatrixPackage/cmake-build-debug/CMakeFiles/MatrixPackage.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/wenshao/MyProjects/MyCppPackage/MatrixPackage/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wenshao/MyProjects/MyCppPackage/MatrixPackage /home/wenshao/MyProjects/MyCppPackage/MatrixPackage /home/wenshao/MyProjects/MyCppPackage/MatrixPackage/cmake-build-debug /home/wenshao/MyProjects/MyCppPackage/MatrixPackage/cmake-build-debug /home/wenshao/MyProjects/MyCppPackage/MatrixPackage/cmake-build-debug/CMakeFiles/MatrixPackage.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/MatrixPackage.dir/depend
 

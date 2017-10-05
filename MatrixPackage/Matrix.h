@@ -38,7 +38,11 @@ public:
 public:
     T &operator()(int i, int j) const;
 
+    Matrix& operator()(Matrix &mat);
+
     Matrix &operator=(const Matrix &mat);
+
+    Matrix &operator=(T newVal);
 
     Matrix operator+(Matrix &mat);
 
@@ -58,11 +62,30 @@ public:
 
     Matrix operator/(double DivNum);
 
-    bool operator==(Matrix &mat);
+    Matrix operator==(Matrix &mat);
 
-    bool operator!=(Matrix &mat);
+    Matrix operator!=(Matrix &mat);
 
     Matrix operator^(double power);
+
+    Matrix operator>(Matrix &mat);
+
+    Matrix operator>(T val);
+
+    Matrix operator<(T val);
+
+    Matrix operator==(T val);
+
+    Matrix operator!=(T val);
+
+    Matrix operator<(Matrix &mat);
+
+    Matrix operator&(Matrix &mat);
+
+    Matrix operator|(Matrix &mat);
+
+    Matrix &operator~();
+
 
 public:
     void print();
@@ -138,6 +161,10 @@ public:
     Matrix flatten();
 
     Matrix &sort(int index = 0, int axis = 1, int SortMode = 0);
+
+    bool haveZero();
+
+    Matrix &setVal(Matrix mat, T newVal);
 
 private:
     int MatrixRow;

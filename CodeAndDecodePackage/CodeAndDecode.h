@@ -1,0 +1,14 @@
+//
+// Created by wenshao on 17-10-5.
+//
+
+#ifndef CODEANDDECODEPACKAGE_CODEANDDECODE_H
+#define CODEANDDECODEPACKAGE_CODEANDDECODE_H
+
+
+class CodeAndDecode {
+
+};
+
+
+#endif //CODEANDDECODEPACKAGE_CODEANDDECODE_H

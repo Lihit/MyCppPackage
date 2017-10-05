@@ -80,9 +80,18 @@ int main() {
     tmp.sliceByIndex(RowIndex, ColIndex).print();
     Matrix<double > tmp11=tmp^2;
     tmp11.print();*/
-    double Array[4] = {10, 100, -10, 1};
+    double Array[4] = {0, 100, -10, 1};
     Matrix<double> tmp(Array, 2, 2);
+    if(tmp.haveZero()){
+        cout << tmp;
+    }
+    Matrix<double> ret=~(tmp==1);
+    cout<<ret;
+    tmp.setVal(ret,1022);
     cout << tmp;
-    Matrix<double> tmp1=tmp^2;
-    cout<<tmp1;
+    if((tmp&ret).haveZero()){
+        cout<<"helllo"<<endl;
+    }
+    Matrix<double> MAT=tmp(ret)=233;
+    cout<<MAT<<endl;
 }
